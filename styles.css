@@ -273,3 +273,173 @@ html body .hero .portrait-photo::after {
   max-height: 650px;
   object-fit: cover;
 }
+
+-------------
+
+/* =========================
+   SUBMENÚ DE OBRAS
+========================= */
+
+.obras-submenu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  margin: 3rem 0 5rem;
+  padding-bottom: 1rem;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.obras-submenu a {
+  color: inherit;
+  text-decoration: none;
+
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+
+  transition: opacity 0.25s ease;
+}
+
+.obras-submenu a:hover {
+  opacity: 0.5;
+}
+
+
+/* =========================
+   CATEGORÍAS
+========================= */
+
+.obras-categoria {
+  margin-bottom: 7rem;
+}
+
+.obras-categoria > h3 {
+  margin-bottom: 2rem;
+
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400;
+}
+
+
+/* =========================
+   LISTA DE OBRAS
+========================= */
+
+.lista-obras {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+
+/* cada composición */
+
+.obra-acordeon {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+
+/* título de la obra */
+
+.obra-acordeon summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 2rem;
+
+  padding: 1.6rem 0;
+
+  cursor: pointer;
+
+  list-style: none;
+}
+
+
+/* quitar triángulo automático */
+
+.obra-acordeon summary::-webkit-details-marker {
+  display: none;
+}
+
+
+/* título */
+
+.obra-titulo {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+
+/* año */
+
+.obra-anio {
+  font-size: 0.85rem;
+  opacity: 0.55;
+}
+
+
+/* pequeña flecha */
+
+.obra-acordeon summary::after {
+  content: "+";
+
+  font-size: 1.5rem;
+  font-weight: 300;
+
+  transition: transform 0.3s ease;
+}
+
+.obra-acordeon[open] summary::after {
+  content: "−";
+}
+
+
+/* =========================
+   CONTENIDO DESPLEGADO
+========================= */
+
+.obra-contenido {
+  max-width: 900px;
+
+  padding: 0 0 3rem;
+}
+
+.obra-contenido p {
+  max-width: 650px;
+
+  line-height: 1.8;
+
+  margin-bottom: 2rem;
+}
+
+.obra-contenido img {
+  width: 100%;
+  max-width: 700px;
+
+  height: auto;
+  display: block;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================
+   MÓVIL
+========================= */
+
+@media (max-width: 700px) {
+
+  .obras-submenu {
+    gap: 1.2rem;
+    margin-bottom: 3rem;
+  }
+
+  .obra-acordeon summary {
+    gap: 1rem;
+  }
+
+  .obra-titulo {
+    font-size: 1.1rem;
+  }
+
+}
