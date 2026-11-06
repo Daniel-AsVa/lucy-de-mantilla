@@ -53,8 +53,37 @@ footer { padding: 2rem 5vw; display: flex; justify-content: space-between; borde
   .site-header { min-height: 72px; }
   .brand span:last-child { display: none; }
   .menu-button { display: block; }
-  nav { display: none; position: absolute; top: 72px; left: 0; right: 0; padding: 1.25rem 5vw; background: var(--paper); border-bottom: 1px solid var(--line); flex-direction: column; }
-  nav.open { display: flex; }
+  
+  nav {
+  display: flex;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 1.25rem 5vw;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  flex-direction: column;
+
+  opacity: 0;
+  transform: translateY(-16px);
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease,
+    visibility 0s linear 0.35s;
+  }
+
+  nav.open {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+  transition-delay: 0s;
+  }
+
   .hero { min-height: auto; padding-top: 4rem; grid-template-columns: 1fr; }
   h1 { font-size: clamp(3.7rem, 18vw, 6.5rem); }
   .portrait { min-height: 390px; width: calc(100% - 18px); }

@@ -50,3 +50,4 @@ Añade al final de `styles.css`:
 - `script.js`: menú móvil y año automático.
 - `imagenes`: fotografías autorizadas.
 
+Agregar las imagenes de las marinera con las que ya cuento, y quizas agregar una playlist de fondo que reproduzca marineras de Lucy
